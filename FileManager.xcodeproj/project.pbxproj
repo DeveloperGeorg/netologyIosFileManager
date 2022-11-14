@@ -13,6 +13,7 @@
 		41921F7B29220B7D00D09996 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41921F7929220B7D00D09996 /* Main.storyboard */; };
 		41921F7D29220B8000D09996 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41921F7C29220B8000D09996 /* Assets.xcassets */; };
 		41921F8029220B8000D09996 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41921F7E29220B8000D09996 /* LaunchScreen.storyboard */; };
+		41921F882922112300D09996 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41921F872922112300D09996 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		41921F7C29220B8000D09996 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41921F7F29220B8000D09996 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41921F8129220B8000D09996 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41921F872922112300D09996 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				41921F7529220B7D00D09996 /* SceneDelegate.swift */,
 				41921F7729220B7D00D09996 /* ViewController.swift */,
 				41921F7929220B7D00D09996 /* Main.storyboard */,
+				41921F872922112300D09996 /* TableViewController.swift */,
 				41921F7C29220B8000D09996 /* Assets.xcassets */,
 				41921F7E29220B8000D09996 /* LaunchScreen.storyboard */,
 				41921F8129220B8000D09996 /* Info.plist */,
@@ -141,6 +144,7 @@
 				41921F7829220B7D00D09996 /* ViewController.swift in Sources */,
 				41921F7429220B7D00D09996 /* AppDelegate.swift in Sources */,
 				41921F7629220B7D00D09996 /* SceneDelegate.swift in Sources */,
+				41921F882922112300D09996 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
