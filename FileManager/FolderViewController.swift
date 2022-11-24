@@ -1,10 +1,3 @@
-//
-//  TableViewController.swift
-//  FileManager
-//
-//  Created by Георгий Бондаренко on 14.11.2022.
-//
-
 import UIKit
 
 class FolderViewController: UITableViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
@@ -27,15 +20,10 @@ class FolderViewController: UITableViewController, UIImagePickerControllerDelega
         imagePickerController.sourceType = .photoLibrary
         imagePickerController.isEditing = true
         imagePickerController.delegate = self
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        
         return contents.count
     }
 
@@ -43,8 +31,6 @@ class FolderViewController: UITableViewController, UIImagePickerControllerDelega
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = contents[indexPath.row]
-
-        // Configure the cell...
 
         return cell
     }
