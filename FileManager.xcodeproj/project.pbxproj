@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4110FB77293B5115009E4A95 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4110FB76293B5115009E4A95 /* LogInViewController.swift */; };
 		41921F7429220B7D00D09996 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41921F7329220B7D00D09996 /* AppDelegate.swift */; };
 		41921F7629220B7D00D09996 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41921F7529220B7D00D09996 /* SceneDelegate.swift */; };
 		41921F7B29220B7D00D09996 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41921F7929220B7D00D09996 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4110FB76293B5115009E4A95 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		41921F7029220B7D00D09996 /* FileManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41921F7329220B7D00D09996 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41921F7529220B7D00D09996 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				41921F7C29220B8000D09996 /* Assets.xcassets */,
 				41921F7E29220B8000D09996 /* LaunchScreen.storyboard */,
 				41921F8129220B8000D09996 /* Info.plist */,
+				4110FB76293B5115009E4A95 /* LogInViewController.swift */,
 			);
 			path = FileManager;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4110FB77293B5115009E4A95 /* LogInViewController.swift in Sources */,
 				41921F7429220B7D00D09996 /* AppDelegate.swift in Sources */,
 				41921F7629220B7D00D09996 /* SceneDelegate.swift in Sources */,
 				41921F882922112300D09996 /* FolderViewController.swift in Sources */,
