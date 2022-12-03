@@ -58,17 +58,32 @@ class LogInViewController: UIViewController {
         }
     }
     
-    @IBSegueAction func enterPasswordHandler(_ coder: NSCoder) -> FolderViewController? {
-        guard let passwordFromInput = passwordField.text else { return nil }
+    @IBAction func enterPasswordHandler(_ sender: Any) {
+        guard let passwordFromInput = passwordField.text else { return }
         print(passwordFromInput)
         if (self.checkPassword(password: passwordFromInput)) {
-            
-            return FolderViewController(coder: coder)
+
+            print("Correct password")
+            let controller : UITabBarController = self.storyboard?.instantiateViewController(withIdentifier: "AppTabBar") as! UITabBarController
+            self.navigationController?.pushViewController(controller, animated: true)
+            return
         } else {
             /**@todo error */
-            return nil
+            print("Incorrect password")
+            return
         }
     }
+    //    func enterPasswordHandler(_ coder: NSCoder) -> FolderViewController? {
+//        guard let passwordFromInput = passwordField.text else { return nil }
+//        print(passwordFromInput)
+//        if (self.checkPassword(password: passwordFromInput)) {
+//
+//            return FolderViewController(coder: coder)
+//        } else {
+//            /**@todo error */
+//            return nil
+//        }
+//    }
     
     private func checkPasswordWasSet() -> Bool {
 //        keychain["login"] = nil
