@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import KeychainAccess
 
 class LogInViewController: UIViewController {
+    
+    private var firstTimeSetPassword: String?
+    let keychain = Keychain()
 
     @IBOutlet weak var passwordField: UITextField!
     
@@ -18,6 +22,11 @@ class LogInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        self.initializeViewElements()
+    }
+
+    private func initializeViewElements() -> Void {
         if (self.checkPasswordWasSet()) {
             enterPasswordButton.setTitle("Введите пароль", for: .normal)
             setPasswordButton.isHidden = true
@@ -28,6 +37,25 @@ class LogInViewController: UIViewController {
     }
 
     @IBAction func setPasswordHandler(_ sender: Any) {
+        guard let passwordFromInput = passwordField.text else { return  }
+        if (validatePassword(password: passwordFromInput)) {
+            if (self.firstTimeSetPassword == nil) {
+                self.firstTimeSetPassword = passwordFromInput
+                setPasswordButton.setTitle("Повторите пароль", for: .normal)
+                passwordField.text = ""
+            } else {
+                if (self.firstTimeSetPassword == passwordFromInput) {
+                    self.firstTimeSetPassword = nil
+                    self.setPassword(password: passwordFromInput)
+                    print("Success")
+                } else {
+                    self.firstTimeSetPassword = nil
+                    passwordField.text = ""
+                    self.initializeViewElements()
+                    showError("Пароли не совпадают")
+                }
+            }
+        }
     }
     
     @IBSegueAction func enterPasswordHandler(_ coder: NSCoder) -> FolderViewController? {
@@ -43,10 +71,39 @@ class LogInViewController: UIViewController {
     }
     
     private func checkPasswordWasSet() -> Bool {
-        return true
+//        keychain["login"] = nil
+        return self.getPassword() != nil
     }
 
     private func checkPassword(password: String) -> Bool {
-        return password == "test"
+        if (password != self.getPassword()) {
+            showError("Неверный пароль")
+            return false
+        }
+        return true
+    }
+
+    private func getPassword() -> String? {
+        print("password is \(keychain["login"])")
+        return keychain["login"]
+    }
+
+    private func setPassword(password: String) -> Void {
+        keychain["login"] = password
+    }
+
+    private func validatePassword(password: String) -> Bool {
+        if (password.count < 4) {
+            showError("Пароль должен содержать минимум 4 сивола")
+            return false
+        }
+        return true
+    }
+
+    private func showError(_ message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 }
