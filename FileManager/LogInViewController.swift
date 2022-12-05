@@ -40,7 +40,6 @@ class LogInViewController: UIViewController {
                 if (self.firstTimeSetPassword == passwordFromInput) {
                     self.firstTimeSetPassword = nil
                     self.setPassword(password: passwordFromInput)
-                    print("Success")
                     goToTheApp()
                 } else {
                     self.firstTimeSetPassword = nil
@@ -54,15 +53,9 @@ class LogInViewController: UIViewController {
     
     @IBAction func enterPasswordHandler(_ sender: Any) {
         guard let passwordFromInput = passwordField.text else { return }
-        print(passwordFromInput)
         if (self.checkPassword(password: passwordFromInput)) {
 
-            print("Correct password")
             goToTheApp()
-            return
-        } else {
-            /**@todo error */
-            print("Incorrect password")
             return
         }
     }
@@ -80,7 +73,6 @@ class LogInViewController: UIViewController {
     }
 
     private func getPassword() -> String? {
-        print("password is \(keychain["password"])")
         return keychain["password"]
     }
 
