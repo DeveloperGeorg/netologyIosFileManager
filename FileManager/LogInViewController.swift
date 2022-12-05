@@ -1,10 +1,3 @@
-//
-//  LogInViewController.swift
-//  FileManager
-//
-//  Created by Георгий Бондаренко on 03.12.2022.
-//
-
 import UIKit
 import KeychainAccess
 
@@ -48,6 +41,7 @@ class LogInViewController: UIViewController {
                     self.firstTimeSetPassword = nil
                     self.setPassword(password: passwordFromInput)
                     print("Success")
+                    goToTheApp()
                 } else {
                     self.firstTimeSetPassword = nil
                     passwordField.text = ""
@@ -64,8 +58,7 @@ class LogInViewController: UIViewController {
         if (self.checkPassword(password: passwordFromInput)) {
 
             print("Correct password")
-            let controller : UITabBarController = self.storyboard?.instantiateViewController(withIdentifier: "AppTabBar") as! UITabBarController
-            self.navigationController?.pushViewController(controller, animated: true)
+            goToTheApp()
             return
         } else {
             /**@todo error */
@@ -73,20 +66,8 @@ class LogInViewController: UIViewController {
             return
         }
     }
-    //    func enterPasswordHandler(_ coder: NSCoder) -> FolderViewController? {
-//        guard let passwordFromInput = passwordField.text else { return nil }
-//        print(passwordFromInput)
-//        if (self.checkPassword(password: passwordFromInput)) {
-//
-//            return FolderViewController(coder: coder)
-//        } else {
-//            /**@todo error */
-//            return nil
-//        }
-//    }
     
     private func checkPasswordWasSet() -> Bool {
-//        keychain["login"] = nil
         return self.getPassword() != nil
     }
 
@@ -99,12 +80,12 @@ class LogInViewController: UIViewController {
     }
 
     private func getPassword() -> String? {
-        print("password is \(keychain["login"])")
-        return keychain["login"]
+        print("password is \(keychain["password"])")
+        return keychain["password"]
     }
 
     private func setPassword(password: String) -> Void {
-        keychain["login"] = password
+        keychain["password"] = password
     }
 
     private func validatePassword(password: String) -> Bool {
@@ -120,5 +101,10 @@ class LogInViewController: UIViewController {
         
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         present(alert, animated: true, completion: nil)
+    }
+
+    private func goToTheApp() -> Void {
+        let controller : UITabBarController = self.storyboard?.instantiateViewController(withIdentifier: "AppTabBar") as! UITabBarController
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 }
