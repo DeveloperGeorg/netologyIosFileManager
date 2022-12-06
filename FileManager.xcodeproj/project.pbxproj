@@ -7,15 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4110FB77293B5115009E4A95 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4110FB76293B5115009E4A95 /* LogInViewController.swift */; };
+		416FE44A293B662F002C1EAD /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 416FE449293B662F002C1EAD /* KeychainAccess */; };
 		41921F7429220B7D00D09996 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41921F7329220B7D00D09996 /* AppDelegate.swift */; };
 		41921F7629220B7D00D09996 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41921F7529220B7D00D09996 /* SceneDelegate.swift */; };
 		41921F7B29220B7D00D09996 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41921F7929220B7D00D09996 /* Main.storyboard */; };
 		41921F7D29220B8000D09996 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41921F7C29220B8000D09996 /* Assets.xcassets */; };
 		41921F8029220B8000D09996 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41921F7E29220B8000D09996 /* LaunchScreen.storyboard */; };
 		41921F882922112300D09996 /* FolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41921F872922112300D09996 /* FolderViewController.swift */; };
+		419345E5293B8AB300FBF684 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419345E4293B8AB300FBF684 /* SettingsTableViewController.swift */; };
+		41E3E8E3293DC41B005BFB48 /* FolderOrderEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E3E8E2293DC41B005BFB48 /* FolderOrderEnum.swift */; };
+		41E3E8E5293DC4F5005BFB48 /* UserDefaultsSettingsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E3E8E4293DC4F5005BFB48 /* UserDefaultsSettingsDataProvider.swift */; };
+		41E3E8E6293DC65D005BFB48 /* SettingsDataProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E3E8E0293DC3B7005BFB48 /* SettingsDataProviderProtocol.swift */; };
+		41E3E8E7293DC906005BFB48 /* SettingsOrderPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419345E8293B8B6600FBF684 /* SettingsOrderPickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4110FB76293B5115009E4A95 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		41921F7029220B7D00D09996 /* FileManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41921F7329220B7D00D09996 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41921F7529220B7D00D09996 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +32,11 @@
 		41921F7F29220B8000D09996 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41921F8129220B8000D09996 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41921F872922112300D09996 /* FolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderViewController.swift; sourceTree = "<group>"; };
+		419345E4293B8AB300FBF684 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		419345E8293B8B6600FBF684 /* SettingsOrderPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOrderPickerViewController.swift; sourceTree = "<group>"; };
+		41E3E8E0293DC3B7005BFB48 /* SettingsDataProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDataProviderProtocol.swift; sourceTree = "<group>"; };
+		41E3E8E2293DC41B005BFB48 /* FolderOrderEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderOrderEnum.swift; sourceTree = "<group>"; };
+		41E3E8E4293DC4F5005BFB48 /* UserDefaultsSettingsDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsSettingsDataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				416FE44A293B662F002C1EAD /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +77,12 @@
 				41921F7C29220B8000D09996 /* Assets.xcassets */,
 				41921F7E29220B8000D09996 /* LaunchScreen.storyboard */,
 				41921F8129220B8000D09996 /* Info.plist */,
+				4110FB76293B5115009E4A95 /* LogInViewController.swift */,
+				419345E4293B8AB300FBF684 /* SettingsTableViewController.swift */,
+				419345E8293B8B6600FBF684 /* SettingsOrderPickerViewController.swift */,
+				41E3E8E0293DC3B7005BFB48 /* SettingsDataProviderProtocol.swift */,
+				41E3E8E2293DC41B005BFB48 /* FolderOrderEnum.swift */,
+				41E3E8E4293DC4F5005BFB48 /* UserDefaultsSettingsDataProvider.swift */,
 			);
 			path = FileManager;
 			sourceTree = "<group>";
@@ -83,6 +103,9 @@
 			dependencies = (
 			);
 			name = FileManager;
+			packageProductDependencies = (
+				416FE449293B662F002C1EAD /* KeychainAccess */,
+			);
 			productName = FileManager;
 			productReference = 41921F7029220B7D00D09996 /* FileManager.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +134,9 @@
 				Base,
 			);
 			mainGroup = 41921F6729220B7D00D09996;
+			packageReferences = (
+				416FE448293B662F002C1EAD /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = 41921F7129220B7D00D09996 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +164,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4110FB77293B5115009E4A95 /* LogInViewController.swift in Sources */,
+				419345E5293B8AB300FBF684 /* SettingsTableViewController.swift in Sources */,
 				41921F7429220B7D00D09996 /* AppDelegate.swift in Sources */,
 				41921F7629220B7D00D09996 /* SceneDelegate.swift in Sources */,
+				41E3E8E3293DC41B005BFB48 /* FolderOrderEnum.swift in Sources */,
+				41E3E8E7293DC906005BFB48 /* SettingsOrderPickerViewController.swift in Sources */,
+				41E3E8E6293DC65D005BFB48 /* SettingsDataProviderProtocol.swift in Sources */,
 				41921F882922112300D09996 /* FolderViewController.swift in Sources */,
+				41E3E8E5293DC4F5005BFB48 /* UserDefaultsSettingsDataProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +388,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		416FE448293B662F002C1EAD /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		416FE449293B662F002C1EAD /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 416FE448293B662F002C1EAD /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 41921F6829220B7D00D09996 /* Project object */;
 }
